@@ -18,8 +18,8 @@
                         id="number"
                         ref="number"
                         name="number"
-                        label="Card Number"
-                        placeholder="Credit Card Number"
+                        label="Numero della Carta di Credito"
+                        placeholder="Numero della Carta di Credito"
                         @validate="onValidate"
                         @card-types.native="onCardTypeChange"
                         @valid.native="() => onValid('number', showName ? 'name' : 'expMonth')">
@@ -53,8 +53,8 @@
                             id="name"
                             ref="name"
                             name="name"
-                            label="Name"
-                            placeholder="Name on Card"
+                            label="Nome"
+                            placeholder="Nominativo sulla carta"
                             class="credit-card-field-name"
                         />
                     </div>
@@ -73,8 +73,8 @@
                             id="expMonth"
                             ref="expMonth"
                             name="expMonth"
-                            label="Month"
-                            placeholder="Month"
+                            label="Mese"
+                            placeholder="Mese"
                             class="credit-card-field-month"
                             @valid.native="() => onValid('expMonth', 'expYear')">
                             <option v-for="i in 12" :key="i">{{ padZero(i, 2) }}</option>
@@ -92,8 +92,8 @@
                             id="expYear"
                             ref="expYear"
                             name="expYear"
-                            label="Year"
-                            placeholder="Year"
+                            label="Anno"
+                            placeholder="Anno"
                             class="credit-card-field-year"
                             @valid.native="() => onValid('expYear', 'cvc')">
                             <option v-for="i in years" :key="i">{{i}}</option>
